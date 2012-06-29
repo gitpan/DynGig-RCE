@@ -7,16 +7,12 @@ package DynGig::RCE;
 
 =head1 VERSION
 
-Version 0.01
+Version 1.00
 
 =cut
-our $VERSION = '0.01';
+our $VERSION = '1.00';
 
 =head1 MODULES
-
-=head2 DynGig::RCE::CLI::Server 
-
-CLI for RCE Server
 
 =head2 DynGig::RCE::Server 
 

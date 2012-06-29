@@ -1,14 +1,30 @@
 --- #YAML:1.0
-name:                DynGig-RCE
-version:             0.01
-abstract:            Remote Code Execution
-license:             perl
-author:              
+name:               DynGig-RCE
+version:            1.00
+abstract:           Remote Code Execution
+author:
     - Kan Liu <kan@cpan.org>
-generated_by:        ExtUtils::MakeMaker version 6.42
-distribution_type:   module
-requires:     
-    Test::More:                    0
+license:            perl
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    Carp:               0
+    Compress::Zlib:     0
+    DynGig::Util:       1
+    File::Spec:         0
+    Socket:             0
+    Sys::Hostname:      0
+    Test::More:         0
+    Thread::Semaphore:  2.12
+    YAML::XS:           0.38
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.57_05
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
-    version: 1.3
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4

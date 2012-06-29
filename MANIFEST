@@ -3,7 +3,6 @@ MANIFEST
 Makefile.PL
 README
 lib/DynGig/RCE/Access.pm
-lib/DynGig/RCE/CLI/Server.pm
 lib/DynGig/RCE/Client.pm
 lib/DynGig/RCE/Code.pm
 lib/DynGig/RCE/Query.pm
