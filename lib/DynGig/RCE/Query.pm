@@ -69,8 +69,11 @@ sub serial
 
 sub zip
 {
-    my $serial = YAML::XS::Dump shift @_;
+    my ( $this, $nozip )  = @_;
 
+    my $serial = YAML::XS::Dump $this;
+
+    return $serial if $nozip;
     return Compress::Zlib::compress( $serial ) unless @_;
     return Compress::Zlib::compress( $serial, @_ );
 }

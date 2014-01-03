@@ -10,7 +10,7 @@ package DynGig::RCE;
 Version 1.00
 
 =cut
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 =head1 MODULES
 

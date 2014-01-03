@@ -59,11 +59,19 @@ sub new
     for my $server ( keys %config )
     {
         my $config = $config{$server};
+        my $nozip = delete $config->{nozip};
 
         next if $done{ $config->{buffer} };
 
-        $config->{buffer} = DynGig::RCE::Query
-            ->new( client => \%client, query => $config->{buffer} )->zip();
+        my %param = (
+            client => \%client,
+            query => $config->{buffer},
+        );
+
+        $param{mnumber} = $config->{mnumber}
+            if defined $config->{mnumber};
+
+        $config->{buffer} = DynGig::RCE::Query->new( %param )->zip( $nozip );
 
         $done{ $config->{buffer} } = 1;
     }
